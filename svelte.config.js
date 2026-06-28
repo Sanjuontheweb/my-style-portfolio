@@ -1,5 +1,14 @@
 import adapter from '@sveltejs/adapter-auto';
 
+export default {
+  kit: {
+    adapter: adapter(),
+    paths: {
+      base: '/my-style-portfolio'
+    }
+  }
+};
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {

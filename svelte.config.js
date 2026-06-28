@@ -1,13 +1,13 @@
 import adapter from '@sveltejs/adapter-static';
 
-export default {
-  kit: {
-    adapter: adapter(),
-    paths: {
-      base: '/my-style-portfolio'
-    }
+kit: {
+  adapter: adapter(),
+  paths: {
+    base: process.env.NODE_ENV === 'production'
+      ? '/my-style-portfolio'
+      : ''
   }
-};
+}
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
